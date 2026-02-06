@@ -190,13 +190,21 @@ const workflows = [
   },
 ];
 
+interface Step {
+  type: string;
+  title?: string;
+  description?: string;
+  icon?: any;
+  branches?: Array<{ icon: any; label: string; title: string; description: string }>;
+}
+
 const StepCard = ({
   step,
   accentColor,
   isActive,
   delay,
 }: {
-  step: any;
+  step: Step;
   accentColor: string;
   isActive: boolean;
   delay: number;
@@ -227,7 +235,7 @@ const StepCard = ({
 
         {/* Branches */}
         <div className="grid grid-cols-2 gap-4">
-          {step.branches.map((branch: any, idx: number) => {
+          {step.branches?.map((branch: Step['branches'][number], idx: number) => {
             const Icon = branch.icon;
             const isYes = branch.label === "YES";
             

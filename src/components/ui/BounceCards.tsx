@@ -34,7 +34,7 @@ export default function BounceCards({
   // Mobile stack state
   const [cardOrder, setCardOrder] = useState<number[]>([]);
   const [isMobile, setIsMobile] = useState(false);
-  const draggablesRef = useRef<any[]>([]);
+  const draggablesRef = useRef<Draggable[]>([]);
 
   // Detect mobile
   useEffect(() => {

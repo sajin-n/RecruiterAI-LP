@@ -191,7 +191,7 @@ export default function FAQ() {
           className="mt-8 sm:mt-10 md:mt-12 text-center px-4 sm:px-0"
         >
           <p className="text-[#737373] dark:text-white mb-4 text-sm sm:text-base">
-            Still have questions? We're here to help.
+            Still have questions? We&apos;re here to help.
           </p>
           <a
             href="#contact"

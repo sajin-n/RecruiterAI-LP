@@ -129,7 +129,7 @@ const ConversationBubble = ({
 
       {/* Quote */}
       <p className="text-[#404040] dark:text-gray-300 text-sm leading-relaxed pl-3">
-        "{conversation.quote}"
+        &quot;{conversation.quote}&quot;
       </p>
 
       {/* Decorative corner element */}
