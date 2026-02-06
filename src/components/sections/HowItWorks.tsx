@@ -18,7 +18,6 @@ import {
   RefreshCw,
   Zap,
   ChevronDown,
-  ArrowRight,
 } from "lucide-react";
 
 // Dark mode color equivalents
@@ -194,8 +193,8 @@ interface Step {
   type: string;
   title?: string;
   description?: string;
-  icon?: any;
-  branches?: Array<{ icon: any; label: string; title: string; description: string }>;
+  icon?: React.ComponentType<{ className?: string }>;
+  branches?: Array<{ icon: React.ComponentType<{ className?: string }>; label: string; title: string; description: string }>;
 }
 
 const StepCard = ({

@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, Quote } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { useTheme } from "@/contexts/ThemeContext";
 import BounceCards from "@/components/ui/BounceCards";
 
