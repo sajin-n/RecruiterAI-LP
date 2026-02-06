@@ -1,0 +1,9 @@
+export { default as Navbar } from "./layout/Navbar";
+export { default as Footer } from "./layout/Footer";
+export { default as Hero } from "./sections/Hero";
+export { default as HowItWorks } from "./sections/HowItWorks";
+export { default as ImpactResults } from "./sections/ImpactResults";
+export { default as HireFromAnywhere } from "./sections/HireFromAnywhere";
+export { default as Testimonials } from "./sections/Testimonials";
+export { default as FAQ } from "./sections/FAQ";
+export { default as FinalCTA } from "./sections/FinalCTA";
