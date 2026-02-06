@@ -1,7 +1,7 @@
 "use client";
 
+import React, { useRef, useState, useEffect } from "react";
 import { motion, useInView } from "framer-motion";
-import { useRef, useState, useEffect } from "react";
 import { useTheme } from "@/contexts/ThemeContext";
 import {
   FileText,
