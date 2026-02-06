@@ -189,12 +189,19 @@ const workflows = [
   },
 ];
 
+interface BranchType {
+  icon: React.ComponentType<{ className?: string }>;
+  label: string;
+  title: string;
+  description: string;
+}
+
 interface Step {
   type: string;
   title?: string;
   description?: string;
   icon?: React.ComponentType<{ className?: string }>;
-  branches?: Array<{ icon: React.ComponentType<{ className?: string }>; label: string; title: string; description: string }>;
+  branches?: BranchType[];
 }
 
 const StepCard = ({
@@ -207,7 +214,7 @@ const StepCard = ({
   accentColor: string;
   isActive: boolean;
   delay: number;
-}): JSX.Element => {
+}) => {
   const { theme } = useTheme();
   const isDark = theme === 'dark';
   const displayColor = getDarkColor(accentColor, isDark);
@@ -234,7 +241,7 @@ const StepCard = ({
 
         {/* Branches */}
         <div className="grid grid-cols-2 gap-4">
-          {step.branches?.map((branch: Step['branches'][number], idx: number) => {
+          {step.branches?.map((branch: BranchType, idx: number) => {
             const Icon = branch.icon;
             const isYes = branch.label === "YES";
             
@@ -292,7 +299,7 @@ const StepCard = ({
     );
   }
 
-  const Icon = step.icon;
+  const Icon = step.icon!;
   const isStart = step.type === "start";
   const isEnd = step.type === "end";
 
